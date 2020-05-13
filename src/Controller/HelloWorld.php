@@ -1,20 +1,21 @@
 <?php
 // src/Controller/LuckyController.php
 namespace App\Controller;
-
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-class HelloWorld
+class HelloWorld extends AbstractController
 {
     /** 
-    * @Route("/hello-world") 
+    * @Route("/register") 
     */ 
     public function hello()
     {
-        // $mensaje = 'Hello World!';
+        //$mensaje = 'Hello World!';
 
-        return new Response(
-            '<html><body><h1>Hello World!</h1></body></html>'
-        );
+        return $this->render('Registro/register.html.twig');
+        // return new Response(
+        //     '<html><body><h1>Hello World!</h1></body></html>'
+        // );
     }
 }
